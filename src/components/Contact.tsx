@@ -1,0 +1,89 @@
+import { motion } from 'framer-motion';
+
+export const Contact = () => {
+  return (
+    <section className="contact-section bg-dot-grid" id="contact">
+      <div className="section-label font-mono uppercase text-muted">
+        [05] CONTACTO
+      </div>
+      <div className="container contact-container">
+        <motion.div 
+          className="contact-info"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="font-serif contact-title leading-tight">
+            ¿Listo para construir algo excepcional?
+          </h2>
+          <p className="font-sans text-muted contact-desc">
+            Complete el formulario para iniciar una conversación sobre su próximo gran proyecto. Respondemos a todas las consultas en menos de 24 horas.
+          </p>
+          <div className="contact-details font-mono text-sm">
+            <div className="contact-row">
+              <span className="text-accent">DIR:</span>
+              <span>Calle Ficticia 123, Distrito Tecnológico</span>
+            </div>
+            <div className="contact-row">
+              <span className="text-accent">EML:</span>
+              <span>proyectos@fmbpartners.com</span>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          className="contact-form-box border-color bg-card"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+            <div className="form-group">
+              <label className="font-mono label-text text-accent tracking-widest uppercase">Nombre Completo</label>
+              <input 
+                className="form-input" 
+                placeholder="Su nombre aquí" 
+                type="text"
+                required
+              />
+            </div>
+            
+            <div className="form-group">
+              <label className="font-mono label-text text-accent tracking-widest uppercase">Email Corporativo</label>
+              <input 
+                className="form-input" 
+                placeholder="email@empresa.com" 
+                type="email"
+                required
+              />
+            </div>
+            
+            <div className="form-group">
+              <label className="font-mono label-text text-accent tracking-widest uppercase">Tipo de Proyecto</label>
+              <select className="form-select uppercase">
+                <option value="">Seleccione una opción</option>
+                <option value="software">Software a Medida</option>
+                <option value="automation">Automatización</option>
+                <option value="consulting">Consultoría</option>
+              </select>
+            </div>
+            
+            <div className="form-group">
+              <label className="font-mono label-text text-accent tracking-widest uppercase">Mensaje</label>
+              <textarea 
+                className="form-textarea" 
+                placeholder="Cuéntenos sobre sus objetivos..." 
+                rows={4}
+                required
+              ></textarea>
+            </div>
+            
+            <button className="btn-primary form-submit" type="submit">Enviar Mensaje</button>
+          </form>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
