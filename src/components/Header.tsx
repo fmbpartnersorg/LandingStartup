@@ -33,7 +33,12 @@ export const Header = () => {
            transition={{ duration: 0.5 }}
            className="header-action"
         >
-          <button className="btn-primary">RESERVAR CONSULTA</button>
+          <button 
+            className="btn-primary"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            RESERVAR CONSULTA
+          </button>
         </motion.div>
 
       </div>
