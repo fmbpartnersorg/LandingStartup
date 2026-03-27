@@ -1,26 +1,21 @@
 import { motion } from 'framer-motion';
+import flaco from '../assets/Brian.png';
+import nau from '../assets/Nau.png';
 
 const teamMembers = [
   {
-    name: "Marcus Thorne",
-    role: "Socio Director",
-    desc: "Ex-arquitecto en FAANG con 15 años liderando infraestructuras escalables."
+    name: "Brian Escobar",
+    role: "Full Stack Engineer",
+    desc: "Especialista en desarrollo full-stack con énfasis en tecnologías modernas.",
+    image: flaco
   },
+
   {
-    name: "Elena Vance",
-    role: "Directora Técnica",
-    desc: "Especialista en sistemas distribuidos y optimización de rendimiento crítico."
+    name: "Mauricio Ribotta",
+    role: "Product Manager & Dev Junior",
+    desc: "Experto en gestión de productos con habilidades en desarrollo junior.",
+    image: nau
   },
-  {
-    name: "David Chen",
-    role: "Estratega de Producto",
-    desc: "Experto en transformar flujos de trabajo complejos en interfaces intuitivas."
-  },
-  {
-    name: "Sofia Rossi",
-    role: "Socia de Automatización",
-    desc: "Ingeniera líder enfocada en IA aplicada y procesos de negocio autónomos."
-  }
 ];
 
 export const Team = () => {
@@ -49,8 +44,12 @@ export const Team = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <div className="team-photo border-color bg-dark">
-                <div className="stripe-pattern photo-pattern"></div>
+              <div className="team-photo border-color bg-dark" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                {member.image ? (
+                  <img src={`${member.image}`} alt={member.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                ) : (
+                  <div className="stripe-pattern photo-pattern"></div>
+                )}
               </div>
               <h4 className="font-serif text-2xl mb-1">{member.name}</h4>
               <p className="font-mono team-role text-accent tracking-widest uppercase mb-4">

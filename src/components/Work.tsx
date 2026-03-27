@@ -40,7 +40,7 @@ export const Work = () => {
   };
 
   return (
-    <section className="work-section bg-dark" id="work">
+    <section className="work-section bg-dark" id="portfolio"> {/* Cambiar el id a portfolio */}
       <div className="section-label font-mono uppercase text-muted">
         [02] PORTAFOLIO
       </div>

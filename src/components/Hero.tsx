@@ -27,8 +27,8 @@ export const Hero = () => {
           </p>
           
           <div className="hero-actions">
-            <button className="btn-primary">Inicia tu Proyecto →</button>
-            <button className="btn-outline">Ver nuestro trabajo</button>
+            <a href="#contact" className="btn-primary">Inicia tu Proyecto →</a>
+            <a href="#portfolio" className="btn-outline">Ver nuestro trabajo</a> 
           </div>
         </motion.div>
 
@@ -44,11 +44,16 @@ export const Hero = () => {
           <div className="visual-card">
             <div className="card-top-line"></div>
             <div className="card-content font-mono">
-              <div className="flex justify-between"><span className="text-muted uppercase">ESTADO</span><span>................ ACTIVO</span></div>
-              <div className="flex justify-between"><span className="text-muted uppercase">PROYECTOS</span><span>................... 50+</span></div>
-              <div className="flex justify-between"><span className="text-muted uppercase">SATISFACCIÓN</span><span>............... 98%</span></div>
-              <div className="flex justify-between"><span className="text-muted uppercase">STACK</span><span className="text-accent">... REACT · NODE · AWS</span></div>
-              <div className="flex justify-between"><span className="text-muted uppercase">CLIENTES</span><span>................... 20+</span></div>
+              <div className="flex justify-between">
+                <span className="text-muted uppercase">ESTADO</span><span>................ ACTIVO</span></div>
+              <div className="flex justify-between">
+                <span className="text-muted uppercase">PROYECTOS</span><span>................... 50+</span></div>
+              <div className="flex justify-between">
+                <span className="text-muted uppercase">SATISFACCIÓN</span><span>............... 98%</span></div>
+              <div className="flex justify-between">
+                <span className="text-muted uppercase">STACK</span><span className="text-accent">... REACT · NODE · AWS</span></div>
+              <div className="flex justify-between">
+                <span className="text-muted uppercase">CLIENTES</span><span>................... 20+</span></div>
               
               <div className="terminal-line text-accent">
                 &gt; sistema_listo <span className="cursor-blink highlight-box"></span>

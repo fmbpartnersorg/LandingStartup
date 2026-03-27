@@ -1,6 +1,19 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [project, setProject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const whatsappMessage = `Nombre: ${name}\nEmail: ${email}\nProyecto: ${project}\nMensaje: ${message}`;
+    const whatsappUrl = `https://wa.me/5493525518649?text=${encodeURIComponent(whatsappMessage)}`;
+    window.location.href = whatsappUrl;
+  };
+
   return (
     <section className="contact-section bg-dot-grid" id="contact">
       <div className="section-label font-mono uppercase text-muted">
@@ -39,13 +52,15 @@ export const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label className="font-mono label-text text-accent tracking-widest uppercase">Nombre Completo</label>
               <input 
                 className="form-input" 
                 placeholder="Su nombre aquí" 
                 type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
@@ -56,17 +71,23 @@ export const Contact = () => {
                 className="form-input" 
                 placeholder="email@empresa.com" 
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
             
             <div className="form-group">
               <label className="font-mono label-text text-accent tracking-widest uppercase">Tipo de Proyecto</label>
-              <select className="form-select uppercase">
+              <select 
+                className="form-select uppercase"
+                value={project}
+                onChange={(e) => setProject(e.target.value)}
+              >
                 <option value="">Seleccione una opción</option>
-                <option value="software">Software a Medida</option>
-                <option value="automation">Automatización</option>
-                <option value="consulting">Consultoría</option>
+                <option value="Software a Medida">Software a Medida</option>
+                <option value="Automatización">Automatización</option>
+                <option value="Consultoría">Consultoría</option>
               </select>
             </div>
             
@@ -76,11 +97,15 @@ export const Contact = () => {
                 className="form-textarea" 
                 placeholder="Cuéntenos sobre sus objetivos..." 
                 rows={4}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 required
               ></textarea>
             </div>
             
             <button className="btn-primary form-submit" type="submit">Enviar Mensaje</button>
+
+
           </form>
         </motion.div>
       </div>
