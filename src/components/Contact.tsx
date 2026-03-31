@@ -54,7 +54,7 @@ export const Contact = () => {
         >
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label className="font-mono label-text text-accent tracking-widest uppercase">Nombre Completo</label>
+              <label className="font-roboto label-text text-accent tracking-widest uppercase">Nombre Completo</label>
               <input 
                 className="form-input" 
                 placeholder="Su nombre aquí" 
@@ -66,7 +66,7 @@ export const Contact = () => {
             </div>
             
             <div className="form-group">
-              <label className="font-mono label-text text-accent tracking-widest uppercase">Email Corporativo</label>
+              <label className="font-roboto label-text text-accent tracking-widest uppercase">Email Corporativo</label>
               <input 
                 className="form-input" 
                 placeholder="email@empresa.com" 
@@ -78,7 +78,7 @@ export const Contact = () => {
             </div>
             
             <div className="form-group">
-              <label className="font-mono label-text text-accent tracking-widest uppercase">Tipo de Proyecto</label>
+              <label className="font-roboto label-text text-accent tracking-widest uppercase">Tipo de Proyecto</label>
               <select 
                 className="form-select uppercase"
                 value={project}
@@ -92,7 +92,7 @@ export const Contact = () => {
             </div>
             
             <div className="form-group">
-              <label className="font-mono label-text text-accent tracking-widest uppercase">Mensaje</label>
+              <label className="font-roboto label-text text-accent tracking-widest uppercase">Mensaje</label>
               <textarea 
                 className="form-textarea" 
                 placeholder="Cuéntenos sobre sus objetivos..." 

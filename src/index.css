@@ -12,6 +12,7 @@
   --font-serif: 'Playfair Display', serif;
   --font-mono: 'Space Mono', monospace;
   --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
 }
 
 * {
@@ -31,6 +32,7 @@ body {
 .font-serif { font-family: var(--font-serif); }
 .font-mono { font-family: var(--font-mono); font-size: 0.875rem; }
 .font-sans { font-family: var(--font-sans); }
+.font-roboto { font-family: var(--font-roboto); }
 
 .uppercase { text-transform: uppercase; }
 .italic { font-style: italic; }
