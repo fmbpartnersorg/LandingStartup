@@ -1,27 +1,26 @@
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { Features } from './components/Features';
-import { Work } from './components/Work';
-import { Team } from './components/Team';
-import { Faq } from './components/Faq';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import { Home } from './pages/Home';
+import { Services } from './pages/Services';
+import { WorkPage } from './pages/WorkPage';
+import { ContactPage } from './pages/ContactPage';
+
 import './index.css';
 import './footer.css';
 import './sections.css';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <Features />
-      <Work />
-      <Team />
-      <Faq />
-      <Contact />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="servicios" element={<Services />} />
+          <Route path="trabajo" element={<WorkPage />} />
+          <Route path="contacto" element={<ContactPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

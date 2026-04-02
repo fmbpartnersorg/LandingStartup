@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <section className="hero-section bg-dot-grid" id="hero">
+    <section className="hero-section" id="hero">
       <div className="hero-label font-mono uppercase text-muted">
         [00] QUIÉNES SOMOS
       </div>
@@ -27,8 +27,8 @@ export const Hero = () => {
           </p>
 
           <div className="hero-actions">
-            <a href="#contact" className="btn-primary">Inicia tu Proyecto →</a>
-            <a href="#portfolio" className="btn-outline">Ver nuestro trabajo</a>
+            <a href="/contacto" className="btn-primary">Inicia tu Proyecto →</a>
+            <a href="/trabajo" className="btn-outline">Ver nuestro trabajo</a>
           </div>
         </motion.div>
 
