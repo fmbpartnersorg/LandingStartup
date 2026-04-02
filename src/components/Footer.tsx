@@ -6,9 +6,9 @@ export const Footer = () => {
           © 2026 FMB PARTNERS
         </div>
         <div className="footer-socials font-mono uppercase">
-          <a href="#" className="social-link text-muted">Linkedin</a>
+          <a href="https://www.instagram.com/fmbpartnersorg/" className="social-link text-muted">Instagram</a>
           <span className="social-separator text-muted">/</span>
-          <a href="#" className="social-link text-muted">Twitter</a>
+          <a href="https://www.linkedin.com/company/fmbpartners/" className="social-link text-muted">Linkedin</a>
         </div>
       </div>
     </footer>

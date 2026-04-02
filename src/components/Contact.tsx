@@ -20,7 +20,7 @@ export const Contact = () => {
         [05] CONTACTO
       </div>
       <div className="container contact-container">
-        <motion.div 
+        <motion.div
           className="contact-info"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -36,16 +36,16 @@ export const Contact = () => {
           <div className="contact-details font-mono text-sm">
             <div className="contact-row">
               <span className="text-accent">DIR:</span>
-              <span>Calle Ficticia 123, Distrito Tecnológico</span>
+              <span>Córdoba Capital, Argentina</span>
             </div>
             <div className="contact-row">
               <span className="text-accent">EML:</span>
-              <span>proyectos@fmbpartners.com</span>
+              <span>fmbpartnersorg@gmail.com</span>
             </div>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="contact-form-box border-color bg-card"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -55,31 +55,31 @@ export const Contact = () => {
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label className="font-roboto label-text text-accent tracking-widest uppercase">Nombre Completo</label>
-              <input 
-                className="form-input" 
-                placeholder="Su nombre aquí" 
+              <input
+                className="form-input"
+                placeholder="Su nombre aquí"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
-            
+
             <div className="form-group">
               <label className="font-roboto label-text text-accent tracking-widest uppercase">Email Corporativo</label>
-              <input 
-                className="form-input" 
-                placeholder="email@empresa.com" 
+              <input
+                className="form-input"
+                placeholder="email@empresa.com"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
-            
+
             <div className="form-group">
               <label className="font-roboto label-text text-accent tracking-widest uppercase">Tipo de Proyecto</label>
-              <select 
+              <select
                 className="form-select uppercase"
                 value={project}
                 onChange={(e) => setProject(e.target.value)}
@@ -90,19 +90,19 @@ export const Contact = () => {
                 <option value="Consultoría">Consultoría</option>
               </select>
             </div>
-            
+
             <div className="form-group">
               <label className="font-roboto label-text text-accent tracking-widest uppercase">Mensaje</label>
-              <textarea 
-                className="form-textarea" 
-                placeholder="Cuéntenos sobre sus objetivos..." 
+              <textarea
+                className="form-textarea"
+                placeholder="Cuéntenos sobre sus objetivos..."
                 rows={4}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
               ></textarea>
             </div>
-            
+
             <button className="btn-primary form-submit" type="submit">Enviar Mensaje</button>
 
 

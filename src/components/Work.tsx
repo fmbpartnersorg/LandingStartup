@@ -15,7 +15,7 @@ const projects = [
     desc: "Mejorar el proceso de gestión de postulantes y optimizar la asignación de empleos para cada uno.",
     image: ConsulRRHH
   },
-  
+
 ];
 
 export const Work = () => {
@@ -40,12 +40,12 @@ export const Work = () => {
   };
 
   return (
-    <section className="work-section bg-dark" id="portfolio"> {/* Cambiar el id a portfolio */}
+    <section className="work-section bg-dark" id="work">
       <div className="section-label font-mono uppercase text-muted">
         [02] PORTAFOLIO
       </div>
       <div className="container overflow-hidden">
-        <motion.h2 
+        <motion.h2
           className="section-title font-serif mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,22 +58,22 @@ export const Work = () => {
           <span className="text-accent text-lg">↔</span> Arrastra para explorar
         </p>
 
-        <motion.div 
-          ref={carouselRef} 
+        <motion.div
+          ref={carouselRef}
           className="carousel"
           whileTap={{ cursor: "grabbing" }}
         >
-          <motion.div 
-            drag="x" 
-            dragConstraints={{ right: 0, left: -width }} 
+          <motion.div
+            drag="x"
+            dragConstraints={{ right: 0, left: -width }}
             style={{ x }}
             onDragEnd={handleDragEnd}
             animate={controls}
             className="inner-carousel"
           >
             {projects.map((project, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="work-card border-color bg-card group"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}

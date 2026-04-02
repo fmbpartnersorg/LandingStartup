@@ -4,18 +4,18 @@ export const Header = () => {
   return (
     <nav className="header-nav">
       <div className="container header-container">
-        
-        <motion.div 
+
+        <motion.div
           className="logo flex-col"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="logo-title font-serif tracking-tight">FMB</span>
+          <a className="logo-title font-serif tracking-tight" href="#hero">FMB</a>
           <span className="logo-subtitle font-mono tracking-widest text-muted uppercase">PARTNERS</span>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="nav-links"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,12 +28,12 @@ export const Header = () => {
         </motion.div>
 
         <motion.div
-           initial={{ opacity: 0, x: 20 }}
-           animate={{ opacity: 1, x: 0 }}
-           transition={{ duration: 0.5 }}
-           className="header-action"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="header-action"
         >
-          <button 
+          <button
             className="btn-primary"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
