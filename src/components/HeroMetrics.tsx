@@ -7,22 +7,22 @@ export const HeroMetrics = () => {
     {
       num: "01",
       icon: <Zap size={24} color="#FFF" />,
-      title: "Automatización",
-      desc: "Menos tareas manuales, menos errores, más tiempo para lo importante.",
+      title: "Desarrollo de Software a Medida",
+      desc: "Creamos sistemas que se adaptan a tu forma de trabajar, no al revés.",
       link: "/servicios"
     },
     {
       num: "02",
       icon: <RefreshCw size={24} color="#FFF" />,
-      title: "Orden de procesos",
-      desc: "Claridad, control y sistemas que no dependen de una sola persona.",
+      title: "Automatización de Procesos",
+      desc: "Transformamos tareas repetitivas en procesos automáticos, eficientes y sin errores.",
       link: "/servicios"
     },
     {
       num: "03",
       icon: <Cloud size={24} color="#FFF" />,
-      title: "Soluciones a medida",
-      desc: "No todo necesita un sistema gigante. Lo simple también escala.",
+      title: "Consultoría Tecnológica",
+      desc: "Orientacion tecnologica para tomar las mejores decisiones para tu negocio.",
       link: "/servicios"
     },
   ];
@@ -32,11 +32,11 @@ export const HeroMetrics = () => {
       <div className="container">
         {/* Header Centrado */}
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           className="text-center flex flex-col items-center"
-           style={{ marginBottom: '5rem' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center flex flex-col items-center"
+          style={{ marginBottom: '5rem' }}
         >
           <h2 className="font-serif text-5xl md:text-6xl text-primary leading-tight font-bold mb-4">
             ¿Cómo lo hacemos?

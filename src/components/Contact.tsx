@@ -31,7 +31,7 @@ export const Contact = () => {
             ¿Listo para construir algo excepcional?
           </h2>
           <p className="font-sans text-muted contact-desc">
-            Complete el formulario para iniciar una conversación sobre su próximo gran proyecto. Respondemos a todas las consultas en menos de 24 horas.
+            Complete el formulario para iniciar una conversación sobre su próximo gran proyecto. Respondemos a todas las consultas al instante!
           </p>
           <div className="contact-details font-mono text-sm">
             <div className="contact-row">

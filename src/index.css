@@ -561,7 +561,3 @@ button {
   width: fit-content;
   transition: gap 0.3s ease;
 }
-
-.feature-card:hover .card-link {
-  gap: 1rem;
-}
