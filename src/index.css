@@ -137,6 +137,10 @@ button {
   align-items: center;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 /* Buttons & Links */
 .btn-primary {
   background-color: var(--accent-yellow);
@@ -528,6 +532,7 @@ button {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-height: 380px;
 }
 
 .card-number {
@@ -560,4 +565,89 @@ button {
   gap: 0.5rem;
   width: fit-content;
   transition: gap 0.3s ease;
+}
+
+/* --- Feature Card Expandable Dropdown --- */
+
+.card-link--toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.75rem;
+  color: var(--accent-yellow);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.card-link--toggle:hover {
+  color: var(--accent-yellow-hover);
+  gap: 0.75rem;
+}
+
+.card-link__arrow {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.feature-card--expanded .card-highlight {
+  transform: scaleX(1);
+}
+
+.card-expand {
+  overflow: hidden;
+}
+
+.card-expand__inner {
+  padding: 0 2rem 2rem;
+}
+
+.card-expand__divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--accent-yellow) 0%,
+    var(--accent-yellow-dim) 50%,
+    transparent 100%
+  );
+  margin-bottom: 1.5rem;
+}
+
+.card-expand__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-expand__item {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.card-expand__bullet {
+  color: var(--accent-yellow);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.card-expand__extras {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-style: italic;
 }
