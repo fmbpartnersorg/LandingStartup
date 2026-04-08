@@ -107,19 +107,3 @@
 .work-card-body {
   padding: 2rem; display: flex; flex-direction: column; flex-grow: 1; pointer-events: auto;
 }
-
-/* HeroMetrics Section */
-.metrics-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-@media (min-width: 1024px) {
-  .metrics-grid {
-    flex-direction: row;
-  }
-}
-.metrics-card {
-  flex: 1 1 0;
-  min-width: 0; /* previene desborde en flex */
-}

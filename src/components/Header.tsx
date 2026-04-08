@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -12,7 +11,7 @@ export const Header = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Link className="logo-title font-serif tracking-tight flex" to="/">FMB</Link>
+          <a className="logo-title font-serif tracking-tight" href="#hero">FMB</a>
           <span className="logo-subtitle font-mono tracking-widest text-muted uppercase">PARTNERS</span>
         </motion.div>
 
@@ -22,9 +21,10 @@ export const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, staggerChildren: 0.1 }}
         >
-          <Link className="font-mono nav-link uppercase" to="/servicios">Servicios</Link>
-          <Link className="font-mono nav-link uppercase" to="/trabajo">Nuestro Trabajo</Link>
-          <Link className="font-mono nav-link uppercase" to="/contacto">Contacto</Link>
+          <a className="font-mono nav-link uppercase" href="#services">Servicios</a>
+          <a className="font-mono nav-link uppercase" href="#work">Nuestro Trabajo</a>
+          <a className="font-mono nav-link uppercase" href="#team">Equipo</a>
+          <a className="font-mono nav-link uppercase" href="#faq">Preguntas Frecuentes</a>
         </motion.div>
 
         <motion.div
@@ -33,12 +33,12 @@ export const Header = () => {
           transition={{ duration: 0.5 }}
           className="header-action"
         >
-          <Link
+          <button
             className="btn-primary"
-            to="/contacto"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             RESERVAR CONSULTA
-          </Link>
+          </button>
         </motion.div>
 
       </div>
